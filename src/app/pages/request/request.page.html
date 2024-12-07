@@ -1,0 +1,23 @@
+<app-header [title]="'Solicitudes'" [avatar]="''"></app-header>
+
+<ion-content>
+  <form [formGroup]="requestForm" (ngSubmit)="submitRequest()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Carrera</ion-label>
+      <ion-input formControlName="carrera"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Carnet</ion-label>
+      <ion-input formControlName="carnet"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Mensaje Solicitud</ion-label>
+      <ion-textarea formControlName="mensaje"></ion-textarea>
+    </ion-item>
+    <ion-button expand="full" type="submit" [disabled]="requestForm.invalid">Enviar</ion-button>
+  </form>
+</ion-content>

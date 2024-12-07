@@ -1,0 +1,16 @@
+<app-header [title]="'Listado'" [avatar]="students[0] ? students[0].fotoPerfil : ''"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let student of students" (click)="viewCourses(student.id)">
+      <ion-avatar slot="start">
+        <img [src]="student.fotoPerfil" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ student.primerNombre }} {{ student.segundoNombre }} {{ student.primerApellido }} {{ student.segundoApellido }}</h2>
+        <p>{{ student.carrera }}</p>
+        <p>{{ student.jornada }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

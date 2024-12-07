@@ -1,0 +1,13 @@
+<app-header [title]="'Cursos de ' + student.primerNombre" [avatar]="student.fotoPerfil"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let course of courses">
+      <ion-label>
+        <h2>{{ course.nombre }}</h2>
+        <p>Semestre: {{ course.semestre }}</p>
+        <p>Docente: {{ course.docente }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
